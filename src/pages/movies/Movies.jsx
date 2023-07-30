@@ -27,10 +27,10 @@ const Movies = () => {
     }
   };
 
-  const handleMovieClick = movie => {
-    setSelectedMovie(movie);
-    history.push(`/movies/${movie.id}`);
-  };
+  // const handleMovieClick = movie => {
+  //   setSelectedMovie(movie);
+  //   history.push(`/movies/${movie.id}`);
+  // };
 
   return (
     <div className={styles.container}>
