@@ -7,9 +7,9 @@ import styles from './Movies.module.css';
 const Movies = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
-  const [selectedMovie, setSelectedMovie] = useState(null);
+  const [selectedMovie] = useState(null);
 
-  const history = useHistory();
+  // const history = useHistory();
 
   const handleSearchInputChange = event => {
     setSearchQuery(event.target.value);
