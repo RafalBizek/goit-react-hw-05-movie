@@ -5,7 +5,6 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom';
-// import Button from 'components/button/Button';
 import Cast from 'components/cast/Cast';
 import Navigation from 'components/navigation/Navigation';
 import Reviews from 'components/reviews/Reviews';
