@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import { App } from './components/App'; // Upewnij się, że ścieżka do komponentu App jest poprawna
+import { App } from 'components/App'; // Upewnij się, że ścieżka do komponentu App jest poprawna
 import './index.css';
 
 ReactDOM.render(
