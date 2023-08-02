@@ -9,8 +9,6 @@ const Movies = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [selectedMovie] = useState(null);
 
-  // const history = useHistory();
-
   const handleSearchInputChange = event => {
     setSearchQuery(event.target.value);
   };
@@ -26,11 +24,6 @@ const Movies = () => {
       console.error('Error searching movies:', error);
     }
   };
-
-  // const handleMovieClick = movie => {
-  //   setSelectedMovie(movie);
-  //   history.push(`/movies/${movie.id}`);
-  // };
 
   return (
     <div className={styles.container}>
