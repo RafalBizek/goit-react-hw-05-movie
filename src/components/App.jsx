@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import PropTypes from 'prop-types'; // Import PropTypes
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Routers, Route, Redirect } from 'react-router-dom';
 import Navigation from 'components/navigation/Navigation';
 
 const Home = React.lazy(() => import('pages/home/Home'));
@@ -13,7 +13,7 @@ const Reviews = React.lazy(() => import('components/reviews/Reviews'));
 
 export const App = () => {
   return (
-    <Router>
+    <Routers>
       <Navigation />
       <Suspense fallback={<div>Loading...</div>}>
         <Route path="/" exact component={Home} />
@@ -23,7 +23,7 @@ export const App = () => {
         <Route path="/movies/:movieId/reviews" exact component={Reviews} />
         <Redirect to="/" />
       </Suspense>
-    </Router>
+    </Routers>
   );
 };
 
