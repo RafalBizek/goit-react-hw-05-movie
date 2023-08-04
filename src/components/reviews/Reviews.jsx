@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types'; // Import PropTypes
 import axios from 'axios';
 import css from './Reviews.module.css';
 
@@ -36,6 +37,11 @@ const Reviews = ({ movieId }) => {
       )}
     </div>
   );
+};
+
+// Definiujemy PropTypes dla komponentu Reviews
+Reviews.propTypes = {
+  movieId: PropTypes.number.isRequired, // Przykładowy typ i wymagana właściwość
 };
 
 export default Reviews;

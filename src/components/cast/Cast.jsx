@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types'; // Import PropTypes
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import css from './Cast.module.css';
@@ -38,6 +39,11 @@ const Cast = () => {
       </ul>
     </div>
   );
+};
+
+// Definiowanie PropTypes dla komponentu Cast
+Cast.propTypes = {
+  movieId: PropTypes.string.isRequired, // movieId powinien być wymagany i być typu string
 };
 
 export default Cast;
