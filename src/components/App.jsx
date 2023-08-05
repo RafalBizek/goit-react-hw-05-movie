@@ -1,11 +1,6 @@
 import React, { Suspense } from 'react';
-import PropTypes from 'prop-types';
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate,
-} from 'react-router-dom'; // Import Navigate
+import PropTypes from 'prop-types'; // Import PropTypes
+import { BrowserRouter as Routers, Route, Redirect } from 'react-router-dom';
 import Navigation from 'components/navigation/Navigation';
 
 const Home = React.lazy(() => import('pages/home/Home'));
@@ -18,24 +13,23 @@ const Reviews = React.lazy(() => import('components/reviews/Reviews'));
 
 export const App = () => {
   return (
-    <Router basename="/goit-react-hw-05-movie/">
+    <Routers>
       <Navigation />
       <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/movies" element={<Movies />} />
-          <Route path="/movies/:movieId" element={<MovieDetails />} />
-          <Route path="/movies/:movieId/cast" element={<Cast />} />
-          <Route path="/movies/:movieId/reviews" element={<Reviews />} />
-          <Route path="*" element={<Navigate to="/" />} /> {/* Use Navigate */}
-        </Routes>
+        <Route path="/" exact component={Home} />
+        <Route path="/movies" exact component={Movies} />
+        <Route path="/movies/:movieId" exact component={MovieDetails} />
+        <Route path="/movies/:movieId/cast" exact component={Cast} />
+        <Route path="/movies/:movieId/reviews" exact component={Reviews} />
+        <Redirect to="/" />
       </Suspense>
-    </Router>
+    </Routers>
   );
 };
 
+// Definiujemy PropTypes dla komponentu App
 App.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node, // Przykładowy typ i opcjonalna właściwość
 };
 
 export default App;
