@@ -9,7 +9,7 @@ const rootElement = document.getElementById('root');
 const root = createRoot(rootElement); // Używamy createRoot zamiast render
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/goit-react-hw-05-movie/">
+    <BrowserRouter basename="/goit-react-hw-05-movie">
       <App />
     </BrowserRouter>
   </React.StrictMode>
