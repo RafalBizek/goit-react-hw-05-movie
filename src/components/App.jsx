@@ -18,7 +18,7 @@ const Reviews = React.lazy(() => import('components/reviews/Reviews'));
 
 export const App = () => {
   return (
-    <Router basename="/goit-react-hw-05-movie/">
+    <>
       <Navigation />
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
@@ -30,7 +30,7 @@ export const App = () => {
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Suspense>
-    </Router>
+    </>
   );
 };
 
