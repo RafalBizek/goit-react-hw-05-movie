@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import PropTypes from 'prop-types';
-import { BrowserRouter as Route, Routes, Navigate } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import Navigation from 'components/navigation/Navigation';
 
 const Home = React.lazy(() => import('pages/home/Home'));
@@ -17,7 +17,7 @@ export const App = () => {
       <Navigation />
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/" element={<Home />} /> {/* No starting slash */}
+          <Route path="/" element={<Home />} />
           <Route path="/movies" element={<Movies />} />
           <Route path="/movies/:movieId" element={<MovieDetails />} />
           <Route path="/movies/:movieId/cast" element={<Cast />} />
