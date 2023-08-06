@@ -1,11 +1,6 @@
 import React, { Suspense } from 'react';
 import PropTypes from 'prop-types';
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate,
-} from 'react-router-dom';
+import { BrowserRouter as Route, Routes, Navigate } from 'react-router-dom';
 import Navigation from 'components/navigation/Navigation';
 
 const Home = React.lazy(() => import('pages/home/Home'));
